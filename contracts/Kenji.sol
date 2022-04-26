@@ -22,7 +22,6 @@ contract Kanji is ERC721, Ownable {
     string private signPrefix = "Signed for Kanji Minting:";
 
     uint256 public totalSupply;
-    uint256 public publicCounter;
     bool public saleLive = true;
 
     constructor() ERC721("Kanji", "KANJI") {
@@ -50,7 +49,7 @@ contract Kanji is ERC721, Ownable {
     ) external payable {
         require(saleLive, "Kanji: Sale Closed");
         require(amount <= PER_MINT, "Kanji: Amount Exceeded");
-        require(publicCounter + amount <= SALE_MAX, "Kanji: Max Minted");
+        require(totalSupply + amount <= SALE_MAX, "Kanji: Max Minted");
         require(!_nonces[nonce], "Kanji: Secret Used");
         require(_minters[msg.sender] == false, "Kanji: Address already minted");
         require(
@@ -62,12 +61,12 @@ contract Kanji is ERC721, Ownable {
 
         _nonces[nonce] = true;
         _minters[msg.sender] = true;
-        publicCounter += amount;
-        totalSupply += amount;
 
         for (uint256 i = 1; i <= amount; i++) {
             _mint(msg.sender, totalSupply + i);
         }
+
+        totalSupply += amount;
     }
 
     function toggleNonce(string calldata nonce) external onlyOwner {
