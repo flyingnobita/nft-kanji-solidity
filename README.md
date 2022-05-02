@@ -17,19 +17,26 @@ There are 3 components to this project:
 1. Contract Deployment/Owner Account
 2. Server Signing Account
 3. Payout Address
-4. Payout Dev Address
-5. Contract Address
-6. Contract ABI
+4. Contract Address
+5. Contract ABI
 
 ### Procedure
 
 1. Update `.env`
 2. Update & deploy `Kanji.sol`
    1. `npx hardhat run scripts\01-deploy_kanji.ts --network localhost`
-   2. Get **CONTRACT_ADDRESS**
+   2. Get <CONTRACT_ADDRESS>
 3. Update & Deploy React App
    1. Update `Kanji.json` & Kanji address
 4. Deploy Cloudflare Worker `index.js`
    1. `wrangler publish`
-5. Update Cloudflare ENV variables (CONTRACT_ADDRESS & PRIVATE KEY)
+5. Update Cloudflare ENV variables (CONTRACT_ADDRESS & PRIVATE_KEY)
 6. Update Cloudflare KV KANJI_SECRET
+
+### Verify Contract on Etherscan
+
+```shell
+npx hardhat clean
+
+npx hardhat verify --network rinkeby <CONTRACT_ADDRESS>
+```
