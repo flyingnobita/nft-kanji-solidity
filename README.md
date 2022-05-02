@@ -1,5 +1,7 @@
 # Mint AI Generated Kanji NFTs
 
+![Sample Kanji](87-small.png)
+
 A lot of NFT projects require their
 
 ## Architecture
