@@ -1,3 +1,15 @@
+# Mint AI Generated Kanji NFTs
+
+A lot of NFT projects require their
+
+## Architecture
+
+There are 3 components to this project:
+
+1. React for frontend
+2. Cloudflare for server
+3. Solidity for smart contract
+
 ## Setup
 
 ### Require
@@ -12,11 +24,12 @@
 ### Procedure
 
 1. Update `.env`
-2. Update & deploy `Kenji.sol`
+2. Update & deploy `Kanji.sol`
    1. `npx hardhat run scripts\01-deploy_kanji.ts --network localhost`
-   2. Get **CONTRACT ADDRESS**
-3. Update & deploy `page_mint.html`
-4. Deploy `index.js` to Cloudflare
+   2. Get **CONTRACT_ADDRESS**
+3. Update & Deploy React App
+   1. Update `Kanji.json` & Kanji address
+4. Deploy Cloudflare Worker `index.js`
    1. `wrangler publish`
-5. Update Cloudflare ENV variables
-6. Update Cloudflare KANJI_SECRET
+5. Update Cloudflare ENV variables (CONTRACT_ADDRESS & PRIVATE KEY)
+6. Update Cloudflare KV KANJI_SECRET
