@@ -1,8 +1,12 @@
 # Mint AI Generated Kanji NFTs
 
-![Sample Kanji](87-small.png)
+![Architecture Diagram](assets\kanji-nft-flow-diagram.drawio.png)
 
-A lot of NFT projects require their
+- For whitelisting, rather than associate predefined wallet addresses allowed to mint, random alphanumeric strings (Secrets) are given to users who are allowed to mint
+- To minimize gas fees, we leverage offchain authentication by using Signer account located in a server (Cloudflare) where the Secrets are also stored
+- The contract will check that the signature submitted matches the Signer account
+
+![Sample Kanji](assets\87-small.png)
 
 ## Architecture
 
