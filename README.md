@@ -1,10 +1,18 @@
 # Mint AI Generated Kanji NFTs
 
-![Sample Kanji](./assets/87-small.png)
-
 It is common for NFT projects to rely on a "Whitelist" to control who can mint their NFTs.
 
 This project implements the ECDSA signtures approach with random alphanumeric strings (Secrets) that are given to users who are allowed to mint. Compare to the common approach of using wallet addresses, using secrets allow the users to use any wallets they wish. Users can also decide on the wallet at the time of minting.
+
+## Kanjis
+
+![Sample Kanji](./assets/87-small.png)
+
+The NFTs that you'll be minting are AI generated Kanjis that were produced with [sketch-rnn](https://github.com/hardmaru/sketch-rnn). You can see the collection that has been minted so far in this [OpenSea Collection](https://testnets.opensea.io/collection/kanji-v3).
+
+## Secrets
+
+The secrets are 80 of the most common pinyins for Kanji. Here's a [hint](https://www.google.com/search?q=most+common+chinese+words+pinyin&rlz=1C1GCEA_enHK998HK998&oq=most+common+&aqs=chrome.1.69i57j69i59j0i512l8.4421j0j7)
 
 ## Architecture
 
@@ -22,10 +30,6 @@ The flow of the minting process is illustrated in the diagram below.
 
 - the signing Private Key should not be stored on the server. The sigatures for all secerts should be pre-generated and stored on the server instead. When a secret is submitted, a lookup of the relevant signature (if the secret is valid) is performed and returned to the user. This prevents the private key from being lost or fall into the wrong hands.
 - include chain.id in the signature to prevent a testnet/mainnet replay attack
-
-## Secrets
-
-The secrets are 80 of the most common pinyins for Kanji. Here's a [hint](https://www.google.com/search?q=most+common+chinese+words+pinyin&rlz=1C1GCEA_enHK998HK998&oq=most+common+&aqs=chrome.1.69i57j69i59j0i512l8.4421j0j7)
 
 ## Setup
 
