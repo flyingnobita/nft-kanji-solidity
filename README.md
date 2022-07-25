@@ -4,7 +4,11 @@
 
 It is common for NFT projects to rely on a "Whitelist" to control who can mint their NFTs.
 
-This project implements the ECDSA signtures approach with random alphanumeric strings (Secrets) that are given to users who are allowed to mint. Compare to the common approach of using wallet addresses, using secrets allow the users to use any wallets they wish. Users can also decide on the wallet at the time of minting.
+This project implements the ECDSA signatures approach with random alphanumeric strings (Secrets) that are given to users who are allowed to mint. Compare to the common approach of using wallet addresses, using secrets allow the users to use any wallets they wish. Users can also decide on the wallet at the time of minting.
+
+## Demo
+
+https://kanji-nft.flyingnobita.com/
 
 ## Kanjis
 
