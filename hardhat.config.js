@@ -21,7 +21,7 @@ module.exports = {
       chainId: 1337,
       accounts: {
         mnemonic: process.env.MNEMONIC,
-        initialIndex: 2,
+        // initialIndex: 2,
         count: 10,
       },
     },
