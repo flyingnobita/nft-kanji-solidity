@@ -51,8 +51,9 @@ The flow of the minting process is illustrated in the diagram below.
 
 1. Update `.env`
 2. Update & deploy `Kanji.sol`
-   1. `npx hardhat run scripts\01-deploy_kanji.ts --network localhost`
-   2. Get <CONTRACT_ADDRESS>
+   1. `npx hardhat node`
+   2. `npx hardhat run scripts/01-deploy_kanji.ts --network localhost`
+   3. Get <CONTRACT_ADDRESS>
 3. Update & Deploy React App
    1. Update `Kanji.json` & Kanji address
 4. Deploy Cloudflare Worker `index.js`
