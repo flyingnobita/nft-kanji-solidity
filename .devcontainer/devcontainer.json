@@ -30,7 +30,7 @@
 		"source=node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume"
 	],
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "sudo chown node node_modules; yarn install",
+	"postCreateCommand": "sudo chown node node_modules; npm install",
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "node"
 }
