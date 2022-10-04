@@ -1,6 +1,6 @@
 # Mint AI Generated Kanji NFTs
 
-> You can find a little more information in this [blog post](https://jansonmak.com/minting-nf-ts-with-ecdsa-signatures) I wrote.
+> You can find a little more information in this [blog post](https://jansonmak.com/minting-nfts-with-ecdsa-signatures) I wrote.
 
 It is common for NFT projects to rely on a "Whitelist" to control who can mint their NFTs.
 
