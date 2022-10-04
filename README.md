@@ -1,6 +1,6 @@
 # Mint AI Generated Kanji NFTs
 
-> You can find a little more information in this [blog post](https://flyingnobita.com/posts/2022/05/07/mint-nft-ecdsa) I wrote.
+> You can find a little more information in this [blog post](https://jansonmak.com/minting-nf-ts-with-ecdsa-signatures) I wrote.
 
 It is common for NFT projects to rely on a "Whitelist" to control who can mint their NFTs.
 
@@ -8,7 +8,7 @@ This project implements the ECDSA signatures approach with random alphanumeric s
 
 ## Demo
 
-https://kanji-nft.flyingnobita.com/
+https://kanji-nft-ecdsa.jansonmak.com/
 
 ## Kanjis
 
@@ -68,7 +68,3 @@ npx hardhat clean
 
 npx hardhat verify --network rinkeby <CONTRACT_ADDRESS>
 ```
-
-## Contact
-
-[![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=%20%40FlyingNobita)](https://twitter.com/FlyingNobita)
